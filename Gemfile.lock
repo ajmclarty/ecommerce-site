@@ -44,6 +44,8 @@ GEM
     arel (3.0.3)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2-x86-mingw32)
+    bootstrap-sass (3.0.2.1)
+      sass (~> 3.2)
     bourbon (3.1.8)
       sass (>= 3.2.0)
       thor
@@ -59,7 +61,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    devise (3.2.1)
+    devise (3.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -82,7 +84,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    kaminari (0.14.1)
+    kaminari (0.15.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     mail (2.5.4)
@@ -161,6 +163,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  bootstrap-sass (~> 3.0.2.1)
   coffee-rails (~> 3.2.1)
   jquery-rails (< 3.0.0)
   meta_search (>= 1.1.0.pre)
