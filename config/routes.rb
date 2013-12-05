@@ -4,6 +4,8 @@ Ecommerce::Application.routes.draw do
 
   match "product/:id" => "products#show", :as => "product_show", :via => :get 
 
+  match "search_results" => "products#search_results", :as => "search_results", :via => :post
+
 
 
 

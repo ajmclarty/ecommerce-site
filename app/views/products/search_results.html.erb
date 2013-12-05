@@ -1,0 +1,7 @@
+<div>
+	<% if @products.empty? %>
+		<p>Your search did not yield any results</p>
+	<%else%>
+		<%= render @products %>
+	<%end%>
+</div>
