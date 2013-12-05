@@ -4,3 +4,4 @@
 	<%= product.price %><br>
 	<%= product.description %><br>
 	<%= image_tag product.image.url(:original) %><br>
+	<%= link_to "Buy", add_cart_path(product) %><br><br>

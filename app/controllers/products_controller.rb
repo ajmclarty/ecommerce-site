@@ -20,6 +20,12 @@ class ProductsController < ApplicationController
 		@provinces = Province.all 
 	end
 
+	def add_cart
+		id = params[:id].to_i
+		session[:cart] << id unless session[:cart].include?(id)
+		redirect_to(:back)
+	end
+
 protected
 	def initialize_session
 		@cart_contents ||=[]

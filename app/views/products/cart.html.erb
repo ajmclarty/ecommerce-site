@@ -4,7 +4,7 @@
 	<% if session[:cart].empty? %>
 		<p>Your cart is empty</p>
 	<%else%>
-		<%= render @products %>
+		<%= render @cart_contents %>
 	<%end%>
 
 	
