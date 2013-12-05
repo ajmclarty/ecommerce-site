@@ -31,6 +31,23 @@ class ProductsController < ApplicationController
 		redirect_to(:back)
 	end
 
+	def checkout
+		@customer = Customer.create(params[:customer])
+		@order = @customer.orders.build
+		@order.pst_rate = @customer.province.pst
+		@order.gst_rate = @customer.province.gst
+		@order.hst_rate = @customer.province.hst
+		@order.save
+		@cart_contents.each do |item|
+			line_item = @order.line_items.build
+			line_item.product_id = item.id
+			line_item.price = item.price
+			line_item.save
+		end
+
+		redirect_to :action => :index
+	end
+
 protected
 	def initialize_session
 		@cart_contents ||=[]
