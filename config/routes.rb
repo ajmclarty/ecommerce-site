@@ -2,8 +2,15 @@ Ecommerce::Application.routes.draw do
 
   root :to => "products#index"
 
+  match "product/:id" => "products#show", :as => "product_show", :via => :get 
+
+
+
+
     devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
+
 
 
   # The priority is based upon order of creation:
