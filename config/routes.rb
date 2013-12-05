@@ -6,7 +6,7 @@ Ecommerce::Application.routes.draw do
 
   match "search_results" => "products#search_results", :as => "search_results", :via => :post
 
-
+  match "cart" => "products#cart", :as => "cart", :via => :get
 
 
     devise_for :admin_users, ActiveAdmin::Devise.config
