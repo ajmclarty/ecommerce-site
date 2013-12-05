@@ -1,7 +1,11 @@
 
 	<%= link_to product.name, product_show_path(:id => product.id) %><br>
-	<%= product.quantity %><br>
+	<% if not request.env['PATH_INFO'] == "/cart" %>
+		<%= product.quantity %><br>
+	<%end%>
 	<%= product.price %><br>
 	<%= product.description %><br>
 	<%= image_tag product.image.url(:original) %><br>
-	<%= link_to "Buy", add_cart_path(product) %><br><br>
+	<% if not request.env['PATH_INFO'] == "/cart" %>
+		<%= link_to "Buy", add_cart_path(product) %><br><br>
+	<%end%>

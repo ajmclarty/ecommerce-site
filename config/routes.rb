@@ -10,6 +10,8 @@ Ecommerce::Application.routes.draw do
 
   match "cart/:id/add_cart" => "products#add_cart", :as => "add_cart", :via => :get
 
+  match "cart/remove_cart" => "products#remove_cart", :as => "remove_cart", :via => :get
+
 
     devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

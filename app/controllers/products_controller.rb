@@ -26,6 +26,11 @@ class ProductsController < ApplicationController
 		redirect_to(:back)
 	end
 
+	def remove_cart
+		reset_session
+		redirect_to(:back)
+	end
+
 protected
 	def initialize_session
 		@cart_contents ||=[]
