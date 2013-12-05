@@ -1,17 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  string: MyString
+  province_id: 1
+  first_name: MyString
+  last_name: MyString
   address: MyString
   city: MyString
   postal_code: MyString
-  province: MyString
+  email: MyString
 
 two:
-  name: MyString
-  string: MyString
+  province_id: 1
+  first_name: MyString
+  last_name: MyString
   address: MyString
   city: MyString
   postal_code: MyString
-  province: MyString
+  email: MyString
